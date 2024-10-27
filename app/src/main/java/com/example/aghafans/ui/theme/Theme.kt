@@ -39,7 +39,6 @@ private val LightColorScheme = lightColorScheme(
 )
 
 
-
 @Composable
 fun AghaFansTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
