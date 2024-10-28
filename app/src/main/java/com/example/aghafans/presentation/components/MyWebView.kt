@@ -3,13 +3,10 @@ package com.example.aghafans.presentation.components
 import android.annotation.SuppressLint
 import android.os.Build
 import android.util.Log
-import android.webkit.JavascriptInterface
 import android.webkit.WebResourceError
 import android.webkit.WebResourceRequest
-import android.webkit.WebSettings
 import android.webkit.WebView
 import android.webkit.WebViewClient
-import android.widget.Toast
 import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.runtime.Composable
@@ -17,7 +14,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.viewinterop.AndroidView
 import com.example.aghafans.MainActivity
-import com.example.aghafans.utils.Prefs.isDarkTheme
 
 @SuppressLint("SetJavaScriptEnabled")
 @Composable
@@ -41,14 +37,14 @@ fun MyWebView(modifier: Modifier = Modifier, url: String) {
             }
         }
         settings.javaScriptEnabled = true // Enable JavaScript
-        settings.domStorageEnabled = true // Enable DOM storage
-        settings.cacheMode = WebSettings.LOAD_CACHE_ELSE_NETWORK // Optimize caching
-        settings.useWideViewPort = true // Enable wide viewport
-        settings.loadWithOverviewMode = true // Fit content on the screen
+//        settings.domStorageEnabled = true // Enable DOM storage
+//        settings.cacheMode = WebSettings.LOAD_CACHE_ELSE_NETWORK // Optimize caching
+//        settings.useWideViewPort = true // Enable wide viewport
+//        settings.loadWithOverviewMode = true // Fit content on the screen
         settings.builtInZoomControls = true // Enable zoom controls
         settings.displayZoomControls = false // Hide zoom buttons
         settings.javaScriptCanOpenWindowsAutomatically = true // Allow window opening via JS
-        settings.databaseEnabled = true
+//        settings.databaseEnabled = true
         settings.setGeolocationEnabled(true)
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
